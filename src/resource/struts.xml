@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+    <!-- 定义调试 -->
+    <constant name="struts.devMode" value="true" />
+    <!-- 定义数据包 -->
+    <package name="index" extends="struts-default">
+        <default-action-ref name="index" />
+        <action name="index"
+                class="com.ming.Action.index"
+                method="execute">
+            <result name="success" type="freemarker">
+                <param name="location">/index.ftl</param>
+            </result>
+        </action>
+    </package>
+    <package name="Login" extends="struts-default">
+        <action name="Login"
+                class = "com.ming.Action.Login"
+                method="execute">
+            <result name="success" type="freemarker">
+                <param name="location">/success.ftl</param>
+            </result>
+            <result name="error" type="freemarker">
+                <param name="location">/error.ftl</param>
+            </result>
+        </action>
+    </package>
+    <package name="admin" extends="struts-default">
+        <interceptors>
+            <interceptor name="LoginInterceptors" class="com.ming.interceptor.Login"></interceptor>
+        </interceptors>
+        <action name="admin"
+                class = "com.ming.Action.admin"
+                method="execute">
+            <interceptor-ref name="LoginInterceptors"></interceptor-ref>
+            <result name="success" type="freemarker">
+                <param name="location">/admin.ftl</param>
+            </result>
+            <result name="input" type="freemarker">
+                <param name="location">/error.ftl</param>
+            </result>
+        </action>
+    </package>
+</struts>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/">
+    <Resource name="jdbc/ming"
+              auth = "Container"
+              type = "javax.sql.DataSource"
+              maxActive = "100"
+              maxidle = "30"
+              maxWait = "1000"
+              username = "test"
+              password = "ABCcba20170607"
+              driverClassName = "com.mysql.cj.jdbc.Driver"
+              url = "jdbc:mysql://47.94.95.84:32786/test"
+    />
+</Context>
