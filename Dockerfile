@@ -1,2 +1,2 @@
 FROM tomcat
-CMD ['catalina.sh', 'run']
+CMD ["catalina.sh", "run"]
