@@ -8,7 +8,5 @@ WORKDIR /usr/local/tomcat/LoginJava/
 RUN mvn install
 RUN mvn test
 RUN mv ./target/mingmingwww.war  /usr/local/tomcat/webapps/
-RUN rm -rf /usr/local/tomcat/webapps/ROOT
-RUN mkdir /usr/local/tomcat/webapps/ROOT
 WORKDIR /usr/local/tomcat/
 CMD ["catalina.sh", "run"]
