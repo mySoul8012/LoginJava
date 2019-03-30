@@ -8,7 +8,7 @@
     <#-- 页面跳转-->
 <script>
     setTimeout(() => {
-        window.location.href = "/";
+        window.location.href = "../webapp";
     }, 3000)
 </script>
 
