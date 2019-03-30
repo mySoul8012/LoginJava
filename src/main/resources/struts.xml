@@ -6,7 +6,7 @@
 
 <struts>
     <!-- 定义调试 -->
-    <constant name="struts.devMode" value="true" />
+    <constant name="struts.devMode" value="false" />
     <!-- 定义数据包 -->
     <package name="index" extends="struts-default">
         <default-action-ref name="index" />
