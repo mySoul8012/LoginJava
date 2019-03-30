@@ -7,6 +7,6 @@ RUN git clone https://github.com/mySoul8012/LoginJava.git
 WORKDIR /usr/local/tomcat/LoginJava/
 RUN mvn install
 RUN mvn test
-RUN cp ./target/mingmingwww.war  /usr/local/tomcat/webapps/
+RUN mv ./target/mingmingwww.war  /usr/local/tomcat/webapps/ROOT.war
 WORKDIR /usr/local/tomcat/
 CMD ["catalina.sh", "run"]
