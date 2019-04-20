@@ -8,7 +8,6 @@
               maxWait = "1000"
               testOnBorrow="true"
               testWhileIdle="true"
-              validationQuery="select 1 fromdual"
               username = "test"
               password = "ABCcba20170607"
               driverClassName = "com.mysql.cj.jdbc.Driver"
