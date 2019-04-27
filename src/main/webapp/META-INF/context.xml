@@ -12,5 +12,6 @@
               password = "ABCcba20170607"
               driverClassName = "com.mysql.cj.jdbc.Driver"
               url = "jdbc:mysql://47.94.95.84:32786/test"
+              validationQuery = "SELECT 1"
     />
 </Context>
